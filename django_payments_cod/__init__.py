@@ -13,4 +13,5 @@ class CODProvider(BasicProvider):
         return CODForm({}, self.get_return_url(payment), self._method, autosubmit=True)
 
     def process_data(self, payment, request):
+        # FIXME Change payment status?
         return HttpResponseRedirect(payment.get_success_url())
