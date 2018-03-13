@@ -1,6 +1,7 @@
 from django.http import HttpResponseRedirect
 from payments.core import BasicProvider
-from payments.forms import PaymentForm
+
+from django_payments_cod.forms import CODForm
 
 
 class CODProvider(BasicProvider):
@@ -9,7 +10,7 @@ class CODProvider(BasicProvider):
     """
 
     def get_form(self, payment, data=None):
-        return PaymentForm({}, self.get_return_url(payment), self._method, autosubmit=True)
+        return CODForm({}, self.get_return_url(payment), self._method, autosubmit=True)
 
     def process_data(self, payment, request):
         return HttpResponseRedirect(payment.get_success_url())
