@@ -23,9 +23,21 @@ Usage
 In your Django project settings:
 
 ```
+INSTALLED_APPS = [
+    ...
+    'django_payments_cod',
+    ]
+```
+
+
+```
 PAYMENT_VARIANTS = {
     'default': ('django_payments_cod.CODProvider', {})}
 ```
 
 
-
+```
+CHECKOUT_PAYMENT_CHOICES = [
+    ('default', 'Cash On Delivery')
+]
+```
