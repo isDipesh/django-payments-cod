@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='django-payments-cod',
-      version='0.1.2',
+      version='0.1.3',
       description='Cash on Delivery Provider for django-payments',
       url='http://github.com/xtranophilist/django-payments-cod',
       author='Dipesh Acharya',
